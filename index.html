@@ -142,8 +142,8 @@ function renderPagination(items, page) {
 
   // Page buttons — show up to 7
   var startP = Math.max(1, page - 3);
-  var endP = Math.min(totalPages, startP + 2);
-  if (endP - startP < 2) startP = Math.max(1, endP - 2);
+  var endP = Math.min(totalPages, startP + 1);
+  if (endP - startP < 1) startP = Math.max(1, endP - 1);
 
   if (startP > 1) { html += '<button data-p="1">1</button>'; if (startP > 2) html += '<span style="padding:0 4px">…</span>'; }
   for (var p = startP; p <= endP; p++) {
